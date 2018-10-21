@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppBoard from './components/AppBoard';
+
+let offersList = [
+  {
+    id: 1,
+    title: 'Flat to rent',
+    description: 'short description',
+    location: 'Athens',
+    status: 'active'
+  },
+  {
+    id: 2,
+    title: 'One room for female',
+    description: 'short description',
+    location: 'Melbourne',
+    status: 'not-active'
+  },
+  {
+    id: 3,
+    title: 'House for sale',
+    description: 'short description',
+    location: 'Wroclaw',
+    status: 'active'
+  },
+  {
+    id: 4,
+    title: 'Flat to share',
+    description: 'short description',
+    location: 'London',
+    status: 'not-active'
+  },
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <AppBoard offers={offersList}/>
       </div>
     );
   }
