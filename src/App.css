@@ -91,3 +91,11 @@ ul {
   font-weight: bold;
   border-bottom: solid 5px transparent;
 }
+
+.searchBar {
+  padding: 20px;
+}
+
+.icons > * {
+  padding: 20px;
+}

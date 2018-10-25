@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import AppSearchBar from './components/AppSearchBar';
+import AppLogo from './components/AppLogo';
+import AppIcon from './components/AppIcon';
 import AppBoard from './components/AppBoard';
 
 let offersList = [
@@ -37,6 +40,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AppSearchBar />
+        <section className="hero">
+          <AppLogo imgSrc="logo.png" />
+          <div className="icons">
+            <AppIcon iconName="cloud" />
+            <AppIcon iconName="favorite" />
+            <AppIcon iconName="attachment" />
+            <AppIcon iconName="home" />
+          </div>
+        </section>
         <AppBoard offers={offersList}/>
       </div>
     );
