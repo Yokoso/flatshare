@@ -4,6 +4,9 @@ import AppSearchBar from './components/AppSearchBar';
 import AppLogo from './components/AppLogo';
 import AppIcon from './components/AppIcon';
 import AppBoard from './components/AppBoard';
+
+import Delayed from './components/Delayed';
+
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -12,21 +15,8 @@ class App extends Component {
     super(props);
     this.state = {
       offersList: [
-        {
-          id: 1,
-          title: 'test',
-          description: 'test',
-          location: 'test',
-          status: 'active'
-        },
-        {
-          id: 2,
-          title: 'test2',
-          description: 'test2',
-          location: 'test2',
-          status: 'active'
-        }
-    ]
+
+      ]
     }
   }
 
@@ -66,7 +56,9 @@ class App extends Component {
             <AppIcon iconName="home" />
           </div>
         </section>
-        <AppBoard offers={this.state.offersList}/>
+        <Delayed waitBeforeShow={1500}>
+          <AppBoard offers={this.state.offersList} />
+        </Delayed>
       </div>
     );
   }
